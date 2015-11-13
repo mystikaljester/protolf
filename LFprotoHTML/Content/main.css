@@ -1,0 +1,201 @@
+body {
+	color: #000000;
+	font-family: Calibri, Corbel, sans-serif;
+	font-size: 100%;
+	width: 80%;
+	margin: auto;
+	text-align: center;
+	font-weight: bold;
+}
+
+input {
+	background-color: #FFFFFF;
+	border: 2px solid #4D4D4D;
+	height: 23px;
+}
+
+select {
+	background-color: #FFFFFF;
+	border: 2px solid #4D4D4D;
+	width: 95%;
+	padding: 3px;
+}
+
+button {
+	border: 2px solid #4D4D4D;
+	margin-top: 1px;
+	font-weight: bolder;
+}
+
+#container {
+	display: table;
+	text-align: center;
+	margin: auto;
+	width: 550px;
+	height: 800px;
+	padding: 5px;
+}
+
+#titleTxt {
+	font-size: 2.125em;
+}
+
+#runID {
+	display: table-cell;
+	text-align: right;
+}
+
+#sectionHeading {
+	font-size: 1.5em;
+	text-align: left;
+	margin-top: 25px;
+}
+
+#row {
+	display: table-row;
+	text-align: center;
+	width: 100%;
+}
+
+#siteInfo {
+	background-color: #a2bae0;
+	padding: 5px;
+}
+
+#siteLabels {
+	display: table-cell;
+	text-align: right;
+	padding: 3px;
+	vertical-align: top;
+	width: 20%;
+}
+
+#siteInputs {
+	display: table-cell;
+	width: 70%;
+	padding: 3px;
+}
+
+#siteInputs>input {
+	width: 92%;
+	padding: 3px;
+}
+
+#siteButtons {
+	display: table-cell;
+	text-align: left;
+	padding: 2px;
+	vertical-align: top;
+	width: 10%;
+}
+#siteAddButton {
+	background-color: #00FF00;
+	height: 33px;
+	width: 33px;
+}
+#siteDelButton {
+	margin-top: 22px;
+	background-color: #FF8888;
+	width: 33px;
+	height: 33px;
+}
+
+#siteImportButton {
+	margin-top: 3px;
+	height: 33px;
+}
+#patternInfo {
+	background-color: #a2bae0;
+	padding: 5px;
+}
+
+#patternLabels {
+	display: table-cell;
+	text-align: right;
+	padding: 3px;
+	vertical-align: top;
+	width: 20%;
+}
+
+#patternInputs {
+	display: table-cell;
+	width: 70%;
+	padding: 3px;
+}
+
+#patternInputs>input {
+	width: 92%;
+	padding: 3px;
+}
+
+#patternButtons {
+	display: table-cell;
+	text-align: left;
+	padding: 2px;
+	vertical-align: top;
+	width: 10%;
+}
+#patternAddButton {
+	background-color: #00FF00;
+	height: 33px;
+	width: 33px;
+}
+#patternDelButton {
+	margin-top: 22px;
+	background-color: #FF8888;
+	width: 33px;
+	height: 33px;
+}
+
+#patternImportButton {
+	margin-top: 3px;
+	height: 33px;
+}
+
+#runInfo {
+	background-color: #a2bae0;
+	padding: 5px;
+}
+
+#scanType {
+	width: 150px;
+	font-weight: 700;
+}
+
+#runLeftCell {
+	display: table-cell;
+	padding: 5px;
+	margin: 5px;
+	width: 50%;
+	vertical-align: text-top;
+}
+
+#runRightCell {
+	display: table-cell;
+	padding: 5px;
+	margin: 5px;
+	width: 50%;
+	vertical-align: bottom;
+}
+
+
+#formButtons {
+	display: table-row;
+	text-align: center;
+}
+
+#submitButton {
+	background-color: #42597e;
+	color: #FFFFFF;
+	border: medium 2px #232e40;
+	margin-top: 10px;
+	padding: 5px;
+}
+
+#resetButton {
+	background-color: #7095d0;
+	color: #232e40;
+	border: medium 2px #232e40;
+	margin-top: 10px;
+	padding: 5px;
+}

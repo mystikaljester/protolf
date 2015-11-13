@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>LF Proto TEST</title>
+    <link href="Content/main.css" rel="stylesheet" />
+    <script src="Scripts/jquery-2.1.4.js"></script>
+    <script src="Scripts/indexButtonActions.js"></script>
+    <script>
+        $(document).ready(newID);
+    </script>
+</head>
+
+<body>
+    <div id="container">
+        <form>
+            <div id="titleTxt">
+                LF TEST
+            </div>
+            <div id="row">
+                <div id="runID">
+                    Run ID:&nbsp;&nbsp;
+                    <input type="text" id="idInputBox" onclick="clearID()">
+                    <button onclick="loadID()">Load ID</button>
+                </div>
+            </div>
+            <div id="sectionHeading">
+                Step 1: Enter site information
+            </div>
+            <div id="siteInfo">
+                <div id="row">
+                    <div id="siteLabels">Enter site to scan: </div>
+                    <div id="siteInputs">
+                        <input type="text" name="siteurl" id="siteInputBox">
+                    </div>
+                    <div id="siteButtons">
+                        <button type="button" id="siteAddButton" onclick="addSite()">+</button>
+                    </div>
+                </div>
+                <div id="row">
+                    <div id="siteLabels">Site List:</div>
+                    <div id="siteInputs">
+                        <select multiple id="siteSelect" size="5"></select>
+                    </div>
+                    <div id="siteButtons">
+                        <button type="button" name="importsites" id="siteImportButton">Import</button>
+                        <button type="button" id="siteDelButton" onclick="deleteSite()">-</button>
+                    </div>
+                </div>
+            </div>
+            <div id="sectionHeading">
+                Step 2: Enter pattern information
+            </div>
+            <div id="patternInfo">
+                <div id="row">
+                    <div id="patternLabels">Search Text: </div>
+                    <div id="patternInputs">
+                        <input type="text" name="patternQual" id="patternQualInputBox">
+                    </div>
+                    <div id="patternButtons">
+                        <button type="button" id="patternAddButton" onclick="addPattern()">+</button>
+                    </div>
+                </div>
+                <div id="row">
+                    <div id="patternLabels">Old text: </div>
+                    <div id="patternInputs">
+                        <input type="text" name="patternOld" id="patternOldInputBox">
+                    </div>
+                </div>
+                <div id="row">
+                    <div id="patternLabels">New text: </div>
+                    <div id="patternInputs">
+                        <input type="text" name="patternNew" id="patternNewInputBox">
+                    </div>
+                </div>
+                <div id="row">
+                    <div id="patternLabels">Pattern: </div>
+                    <div id="patternInputs">
+                        <select multiple id="patternSelect" size="5"></select>
+                    </div>
+                    <div id="patternButtons">
+                        <button type="button" id="patternImportButton">Import</button>
+                        <button type="button" id="patternDelButton" onclick="deletePattern()">-</button>
+                    </div>
+                </div>
+            </div>
+            <div id="sectionHeading">
+                Step 3: Select type for your run.
+            </div>
+            <div id="runInfo">
+                <div id="runLeftCell">
+                    Note: You must run discovery mode scan prior to performing a fix run.
+                </div>
+                <div id="runRightCell">
+                    <select id="scanType">
+                        <option>Discovery Scan</option>
+                        <option>Scan and Fix</option>
+                    </select>
+                </div>
+            </div>
+            <div id="formButtons">
+                <div id="runLeftCell">
+                    <button type="submit" id="submitButton">SUBMIT</button>
+                </div>
+                <div id="runRightCell">
+                    <button type="reset" id="resetButton">Reset Form</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

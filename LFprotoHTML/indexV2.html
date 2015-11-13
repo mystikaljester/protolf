@@ -1,0 +1,184 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>LF Proto</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="Content/test.css" rel="stylesheet" />
+    <script src="Scripts/jquery-2.1.4.js"></script>
+    <script src="Scripts/indexButtonActions.js"></script>
+    <script src="Scripts/bootstrap.js"></script>
+    <script>
+        $(document).ready(newID);
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-lg-offset-2">
+                <div class="row">
+                    <div class="page-header text-center text-primary bg-info">
+                        <h1>LF Bootstrap Proto</h1>
+                    </div>
+                </div>
+                <form class="form-horizontal" role="form">
+                    <div class="form-group">
+                        <div class="row">
+                            <label class="control-label col-md-2 col-md-offset-5" for="idInputBox">Run ID:</label>
+                            <div class="col-md-3">
+                                <input type="text" id="idInputBox" class="form-control" onclick="clearID()" />
+                            </div>
+                            <div class="col-md-1">
+                                <button class="btn btn-default" onclick="loadID()">Load ID</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Start of Accordion Collapse Element -->
+                    <div class="panel-group" id="accordion">
+                        <!-- Accordion GRP1 -->
+                        <div class="panel panel-primary">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">
+                                        Step 1: Enter site information
+                                    </a>
+                                </h4>
+                            </div>
+                            <!-- GRP1 Contents -->
+                            <div class="panel-collapse collapse in" id="collapse1">
+                                <div class="panel-body">
+                                    <div class="form-group row">
+                                        <label class="control-label col-md-3" for="siteInputBox">Enter site to scan:</label>
+                                        <div class="col-md-7">
+                                            <input class="form-control" type="text" name="siteurl" id="siteInputBox" />
+                                        </div>
+                                        <div class="col-md-1">
+                                            <div class="row">
+                                                <button type="button" id="siteAddButton" class="btn btn-success" onclick="addSite()">+</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <label class="control-label col-md-3" for="siteSelect">
+                                            Site list:
+                                        </label>
+                                        <div class="col-md-7">
+                                            <select class="form-control" id="siteSelect" size="5"></select>
+                                        </div>
+                                        <div class="col-md-2">
+                                            <div class="row">
+                                                <button type="button" id="siteImportButton" class="btn btn-default">Import</button>
+                                            </div>
+                                            <div class="row">
+                                                <button type="button" id="siteDelButton" class="btn btn-danger" onclick="deleteSite()">-</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--Accordion GRP2-->
+                        <div class="panel panel-primary">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">
+                                        Step 2: Enter pattern information
+                                    </a>
+                                </h4>
+                            </div>
+                            <!-- GRP2 Contents -->
+                            <div class="panel-collapse collapse" id="collapse2">
+                                <div class="panel-body">
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <label class="control-label col-md-3" for="patternQualInputBox">
+                                                Search Text:
+                                            </label>
+                                            <div class="col-md-7">
+                                                <input class="form-control" type="text" name="patternQual" id="patternQualInputBox" />
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <label class="control-label col-md-3" for="patternOldInputBox">
+                                                Old Text:
+                                            </label>
+                                            <div class="col-md-7">
+                                                <input type="text" class="form-control" name="patternOld" id="patternOldInputBox" />
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <label class="control-label col-md-3" for="patternNewInputBox">
+                                                New Text:
+                                            </label>
+                                            <div class="col-md-7">
+                                                <input type="text" class="form-control" name="new" id="patternNewInputBox" />
+                                            </div>
+                                            <div class="col-md-1">
+                                                <div class="row">
+                                                    <button type="button" id="patternAddButton" class="btn btn-success" onclick="addPattern()">+</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <label class="control-label col-md-3" for="patternSelect">
+                                                Pattern list:
+                                            </label>
+                                            <div class="col-md-7">
+                                                <select class="form-control" multiple id="patternSelect" size="5"></select>
+                                            </div>
+                                            <div class="col-md-1">
+                                                <div class="row">
+                                                    <button type="button" id="patternImportButton" class="btn btn-default">Import</button>
+                                                </div>
+                                                <div class="row">
+                                                    <button type="button" id="patternDelButton" class="btn btn-danger" onclick="deletePattern()">-</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Accordion GRP3 -->
+                        <div class="panel panel-primary">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">
+                                        Step 3: Select the type of run
+                                    </a>
+                                </h4>
+                            </div>
+                            <!-- GRP3 Contents -->
+                            <div class="panel-collapse collapse" id="collapse3">
+                                <div class="panel-body">
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <div class="col-md-8 col-md-offset-1 alert alert-info">
+                                                Note: You must run discovery mode scan prior to performing a fix run.
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-3 col-md-offset-1">
+                                                <label class="radio-inline"><input type="radio" name="optradio" value="discover" />Discovery Run</label>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <label class="radio-inline"><input type="radio" name="optradio" value="fix" />Scan and Fix</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- END OF ACCORDION -->
+                    <button type="submit" class="btn btn-primary">SUBMIT</button>
+                    <button type="reset" class="btn btn-info">Reset Form</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
